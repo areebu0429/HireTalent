@@ -98,22 +98,59 @@ export default function Applications() {
   return (
     <div>
       <h1>Applications</h1>
-      <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      <TableContainer
+        component={Paper}
+        style={{ width: "95%", margin: "0px 0px 0px 25px" }}
+      >
+        <Table aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>JOB_ID</TableCell>
-              <TableCell align="right">Applicant ID</TableCell>
-              <TableCell align="right">Applicant Name</TableCell>
-              <TableCell align="right">Summary</TableCell>
-              <TableCell align="right">Status</TableCell>
-
-              <TableCell align="right">CV</TableCell>
-              <TableCell align="right">Actions</TableCell>
+              {/* <TableCell style={{ paddingLeft: "100px" }}>JOB_ID</TableCell> */}
+              <TableCell style={{ paddingLeft: "100px" }}>Applicant ID</TableCell>
+              <TableCell >Applicant Name</TableCell>
+              <TableCell>Job Application</TableCell>
+              <TableCell>Status</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-            {Application1.map((app, i) => (
+            <TableRow>
+              <TableCell style={{ paddingLeft: "120px" }}>1</TableCell>
+              <TableCell style={{ paddingLeft: "50px" }}>Areeb</TableCell>
+              <TableCell style={{ paddingLeft: "50px" }}>hi</TableCell>
+              <TableCell>
+                <Button style={{ marginLeft: "-35px" }}>Accept</Button>
+                <Button>Reject</Button>
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell style={{ paddingLeft: "120px" }}>1</TableCell>
+              <TableCell style={{ paddingLeft: "50px" }}>Areeb</TableCell>
+              <TableCell style={{ paddingLeft: "50px" }}>hi</TableCell>
+              <TableCell>
+                <Button style={{ marginLeft: "-35px" }}>Accept</Button>
+                <Button>Reject</Button>
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell style={{ paddingLeft: "120px" }}>1</TableCell>
+              <TableCell style={{ paddingLeft: "50px" }}>Areeb</TableCell>
+              <TableCell style={{ paddingLeft: "50px" }}>hi</TableCell>
+              <TableCell>
+                <Button style={{ marginLeft: "-35px" }}>Accept</Button>
+                <Button>Reject</Button>
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell style={{ paddingLeft: "120px" }}>1</TableCell>
+              <TableCell style={{ paddingLeft: "50px" }}>Areeb</TableCell>
+              <TableCell style={{ paddingLeft: "50px" }}>hi</TableCell>
+              <TableCell>
+                <Button style={{ marginLeft: "-35px" }}>Accept</Button>
+                <Button>Reject</Button>
+              </TableCell>
+            </TableRow>
+
+            {/* {Application1.map((app, i) => (
               <>
                 {app.STATUS === "Pending" ? (
                   <TableRow
@@ -159,7 +196,7 @@ export default function Applications() {
                       </Button>
                       {/* <a href={`http://localhost:3001/DownloadResume/${app.CV}`}>
                     CV DOWNLOAD
-                  </a> */}
+                  </a> 
                     </TableCell>
                     <TableCell align="right">
                       <Button
@@ -190,7 +227,7 @@ export default function Applications() {
                   " "
                 )}
               </>
-            ))}
+            ))} */}
           </TableBody>
         </Table>
       </TableContainer>

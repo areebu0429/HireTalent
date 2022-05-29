@@ -23,7 +23,7 @@ import Applications from "./components/Applications/Applications";
 import EmployeeApplications from "./components/EmployeeApplications/EmployeeApplications";
 import MyJobs from "./components/MyJobs/MyJobs";
 import UpdateJob from "./components/UpdateJob/UpdateJob";
-
+import PostJob from "./components/PostJobs/PostJob"
 import AdminLogin from "./components/Admin/AdminLogin";
 import AdminView from "./components/Admin/AdminView";
 const apps = [
@@ -94,13 +94,13 @@ function App() {
   const profileState = useState({
     // //dummy state.It should be empty, requires database for login info to be  correct here
 
-    email: "fgbf",
+    email: "",
     password: "",
-    name: "Adnan",
-    age: "14",
-    lastSchool: "dvdf",
-    lastQualification: "fddfb",
-    type: "employee",
+    name: "",
+    age: "",
+    lastSchool: "",
+    lastQualification: "",
+    type: "",
 
     recentJobsApplied: sample_jobs,
   });
@@ -110,7 +110,7 @@ function App() {
   //     ? [employeeProfile, setEmployeeProfile]
   //     : [employerProfile, setEmployerProfile];
   // const userInfo = p[0].userInfo;
-  const loggedInState = useState(false);
+  const loggedInState = useState(true);
   const [loggedIn, setLoggedIn] = loggedInState;
 
   const [jobs, setJobs] = useState(sample_jobs);
@@ -171,6 +171,9 @@ function App() {
                         <Route path="/profile">
                           <Profile />
                         </Route>
+                        <Route path="/jobs/submissions">
+                          <Applications />
+                        </Route>
                         <Route path="/jobs/:id">
                           <Resume user={user} jobs={jobs} />
                         </Route>
@@ -180,8 +183,9 @@ function App() {
                         <Route path="/myjobs">
                           <MyJobs loggedIn={loggedIn} jobs={jobs} user={user} />
                         </Route>
-                        <Route path="/applications/:id">
-                          <Applications />
+                        
+                        <Route path="/postjob">
+                          <PostJob />
                         </Route>
                         <Route path="/update/:id">
                           <UpdateJob

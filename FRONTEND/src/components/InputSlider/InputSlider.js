@@ -32,7 +32,7 @@ export default function InputSlider({ value, setValue }) {
   return (
     <Box sx={{ width: 250 }}>
       <Typography id="input-slider" gutterBottom>
-        Min Salary(in units of k)
+        Expected Salary
       </Typography>
       <Grid container spacing={2} alignItems="center">
         {/* <Grid item>

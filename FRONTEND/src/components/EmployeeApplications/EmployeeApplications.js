@@ -37,22 +37,60 @@ export default function EmployeeApplications() {
   return (
     <div>
       <h1>Applications</h1>
-      <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      <TableContainer
+        style={{ width: "95%", margin: "0px 0px 0px 25px" }}
+        component={Paper}
+      >
+        <Table aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>JOB_ID</TableCell>
-              <TableCell align="right">JOB TITLE</TableCell>
+              <TableCell style={{ paddingLeft: "50px" }}>
+                Application ID
+              </TableCell>
+              <TableCell>Company Name</TableCell>
+              <TableCell>JOB TITLE</TableCell>
+              <TableCell>Position</TableCell>
+              <TableCell>Job Application</TableCell>
+              <TableCell>Status</TableCell>
 
-              <TableCell align="right">EMP_ID</TableCell>
-              <TableCell align="right">SUMMARY</TableCell>
-              <TableCell align="right">Status</TableCell>
-
-              <TableCell align="right">CV</TableCell>
+              {/* <TableCell>CV</TableCell> */}
             </TableRow>
           </TableHead>
           <TableBody>
-            {Application1.map((app, i) => (
+            <TableRow>
+              <TableCell style={{ paddingLeft: "90px" }}>1</TableCell>
+              <TableCell style={{ paddingLeft: "50px" }}>1</TableCell>
+              <TableCell style={{ paddingLeft: "40px" }}>Fast</TableCell>
+              <TableCell style={{ paddingLeft: "30px" }}>Areeb</TableCell>
+              <TableCell style={{ paddingLeft: "50px" }}>hi</TableCell>
+              <TableCell>Pending</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell style={{ paddingLeft: "90px" }}>1</TableCell>
+              <TableCell style={{ paddingLeft: "50px" }}>1</TableCell>
+              <TableCell style={{ paddingLeft: "40px" }}>Fast</TableCell>
+              <TableCell style={{ paddingLeft: "30px" }}>Areeb</TableCell>
+              <TableCell style={{ paddingLeft: "50px" }}>hi</TableCell>
+              <TableCell>Pending</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell style={{ paddingLeft: "90px" }}>1</TableCell>
+              <TableCell style={{ paddingLeft: "50px" }}>1</TableCell>
+              <TableCell style={{ paddingLeft: "40px" }}>Fast</TableCell>
+              <TableCell style={{ paddingLeft: "30px" }}>Areeb</TableCell>
+              <TableCell style={{ paddingLeft: "50px" }}>hi</TableCell>
+              <TableCell>Pending</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell style={{ paddingLeft: "90px" }}>1</TableCell>
+              <TableCell style={{ paddingLeft: "50px" }}>1</TableCell>
+              <TableCell style={{ paddingLeft: "40px" }}>Fast</TableCell>
+              <TableCell style={{ paddingLeft: "30px" }}>Areeb</TableCell>
+              <TableCell style={{ paddingLeft: "50px" }}>hi</TableCell>
+              <TableCell>Pending</TableCell>
+            </TableRow>
+
+            {/* {Application1.map((app, i) => (
               <TableRow
                 key={i}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
@@ -75,7 +113,7 @@ export default function EmployeeApplications() {
                   </Button>
                 </TableCell>
               </TableRow>
-            ))}
+            ))} */}
           </TableBody>
         </Table>
       </TableContainer>
