@@ -196,7 +196,7 @@ function App() {
                             profile={profile}
                           />
                         </Route>
-                        <Route path="/applications/">
+                        <Route path="/myapplications/">
                           <EmployeeApplications />
                         </Route>
                         <Route path="/settings">
