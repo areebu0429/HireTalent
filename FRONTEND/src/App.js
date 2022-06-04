@@ -24,9 +24,10 @@ import Roadmap from "./components/Roadmap/Roadmap";
 import EmployeeApplications from "./components/EmployeeApplications/EmployeeApplications";
 import MyJobs from "./components/MyJobs/MyJobs";
 import UpdateJob from "./components/UpdateJob/UpdateJob";
-import PostJob from "./components/PostJobs/PostJob"
+import PostJob from "./components/PostJobs/PostJob";
 import AdminLogin from "./components/Admin/AdminLogin";
 import AdminView from "./components/Admin/AdminView";
+import ApplyJob from "./components/ApplyJob/ApplyJob";
 const apps = [
   {
     JOB_ID: 1,
@@ -175,21 +176,21 @@ function App() {
                         <Route path="/roadmap">
                           <Roadmap />
                         </Route>
-                        <Route path="/jobs/submissions">
+                        <Route path="/submissions">
                           <Applications />
                         </Route>
                         <Route path="/jobs/:id">
                           <Resume user={user} jobs={jobs} />
                         </Route>
-                        <Route path="/jobs">
-                          <Jobs loggedIn={loggedIn} jobs={jobs} user={user} />
-                        </Route>
                         <Route path="/myjobs">
                           <MyJobs loggedIn={loggedIn} jobs={jobs} user={user} />
                         </Route>
-                        
+
                         <Route path="/postjob">
                           <PostJob />
+                        </Route>
+                        <Route path="/applyjob">
+                          <ApplyJob />
                         </Route>
                         <Route path="/update/:id">
                           <UpdateJob
