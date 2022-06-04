@@ -20,6 +20,7 @@ import EmployerSignup from "./components/EmployerSignup";
 import EmployerSettings from "./components/EmployerSettings/EmployerSettings";
 import ELogin from "./components/Elogin";
 import Applications from "./components/Applications/Applications";
+import Roadmap from "./components/Roadmap/Roadmap";
 import EmployeeApplications from "./components/EmployeeApplications/EmployeeApplications";
 import MyJobs from "./components/MyJobs/MyJobs";
 import UpdateJob from "./components/UpdateJob/UpdateJob";
@@ -170,6 +171,9 @@ function App() {
 
                         <Route path="/profile">
                           <Profile />
+                        </Route>
+                        <Route path="/roadmap">
+                          <Roadmap />
                         </Route>
                         <Route path="/jobs/submissions">
                           <Applications />

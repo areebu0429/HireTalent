@@ -1,0 +1,55 @@
+.roadmapItemLayout {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #F8F1F1;
+  border-radius: 8px;
+  border: 1px solid #AAAAAA;
+  padding: 20px;
+  width:90%;
+  margin-left: 4%;
+  margin-top: 20px;
+}
+.roadmapItemLayout .serialNumber {
+  color: gray;
+  border: 2px solid gray;
+  width: fit-content;
+  height: fit-content;
+  font-size: 23px;
+  text-align: center;
+  border-radius: 26px;
+  padding: 0px 12px;
+}
+
+.roadmapItemLayout .playlistImage {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.roadmapItemLayout .playlistImage img {
+  width: 200px;
+  border-radius: 8px;
+}
+
+.roadmapItemLayout .information {
+  padding: 10px;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.roadmapItemLayout .information .title {
+  color: black;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.roadmapItemLayout .information .description {
+  font-size: 16px;
+  text-align: justify;
+  margin: 0% !important;
+}
+.roadmapItemLayout .viewBtn{
+    padding: 10px 30px;
+}
