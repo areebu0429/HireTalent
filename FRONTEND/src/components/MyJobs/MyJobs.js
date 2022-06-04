@@ -16,22 +16,35 @@ function MyJobs({ loggedIn, user, location }) {
 
   // const [jobs, setjobs] = useState(sample_jobs);
   const [jobs, setjobs] = useState([]);
+  setjobs({
+    job_id: 1,
+    job_title: "senior software engineer",
+    job_desc: "Want talented engineer",
+    job_skills: "html,css",
+    job_no_of_positions: 2,
+    job_date: "22/07/22", //post date,
+    job_salary: 1000,
+    job_years_of_experience: 2,
+    job_career_level: "Experienced Professional",
+    job_company: "AICompany",
+    job_location: "lahore",
+  });
   console.log({ jobs });
   console.log(profile);
-  useEffect(() => {
-    Axios.post("http://localhost:3001/viewMyJobs", { comp_id: profile.comp_id })
-      .then((response) => {
-        if (response.status === 200) {
-          console.log(response);
-          setjobs(response.data);
-          console.log(jobs);
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-        console.log("Wrong username /Password");
-      });
-  }, []);
+  // useEffect(() => {
+  //   Axios.post("http://localhost:3001/viewMyJobs", { comp_id: profile.comp_id })
+  //     .then((response) => {
+  //       if (response.status === 200) {
+  //         console.log(response);
+  //         setjobs(response.data);
+  //         console.log(jobs);
+  //       }
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //       console.log("Wrong username /Password");
+  //     });
+  // }, []);
 
   // useEffect(() => {
   //   Axios.get("http://localhost:3001/viewJobs")
@@ -64,7 +77,7 @@ function MyJobs({ loggedIn, user, location }) {
   //       console.log("Wrong username /Password");
   //     });
   // }, [location]);
-  console.log(profile);
+  // console.log(profile);
   // >>>>>>> 6b405961559f32f413eaca362ec50bd3be401b5e
   // console.log({ title });
   return (

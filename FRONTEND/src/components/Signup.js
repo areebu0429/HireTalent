@@ -10,6 +10,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { LoggedInContext, ProfileContext, UserContext } from "../App";
 import { styled } from "@mui/material/styles";
+import { FormHelperText } from "@mui/material";
 const Input = styled("input")({
   display: "none",
 });
@@ -179,47 +180,50 @@ export default function Signup() {
           justifyContent: "space-between",
         }}
       >
-        <TextField
-          required
-          id="outlined-required"
-          label="Email"
-          value={inputs.email || ""}
-          onChange={handleChange}
-          name="email"
-        />
-        <br />
-
-        <TextField
-          required
-          id="outlined-password-input"
-          label="Password"
-          type="password"
-          autoComplete="current-password"
-          value={inputs.password || ""}
-          onChange={handleChange}
-          name="password"
-        />
-        <br />
-        <TextField
-          required
-          id="outlined-required"
-          label="Name"
-          value={inputs.name || ""}
-          onChange={handleChange}
-          name="name"
-        />
-        <br />
-        <TextField
-          required
-          type="number"
-          id="outlined-required"
-          label="Age"
-          value={inputs.age || ""}
-          onChange={handleChange}
-          name="age"
-        />
-      </div>
-      {/* <FormControl fullWidth>
+        <FormControl required sx={{ m: 1, minWidth: 120 }}>
+          <TextField
+            required
+            label="Email"
+            id="outlined-required"
+            value={inputs.email || ""}
+            onChange={handleChange}
+            name="email"
+          />
+        </FormControl>
+        <FormControl required sx={{ m: 1, minWidth: 120 }}>
+          <TextField
+            required
+            label="Password"
+            id="outlined-password-input"
+            type="password"
+            autoComplete="current-password"
+            value={inputs.password || ""}
+            onChange={handleChange}
+            name="password"
+          />
+        </FormControl>
+        <FormControl required sx={{ m: 1, minWidth: 120 }}>
+          <TextField
+            required
+            label="Name"
+            id="outlined-required"
+            value={inputs.name || ""}
+            onChange={handleChange}
+            name="name"
+          />
+        </FormControl>
+        <FormControl required sx={{ m: 1, minWidth: 120 }}>
+          <TextField
+            required
+            label="Phone Number"
+            type="number"
+            id="outlined-required"
+            value={inputs.age || ""}
+            onChange={handleChange}
+            name="age"
+          />
+        </FormControl>
+        {/* <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">User Type</InputLabel>
         <Select
           labelId="demo-simple-select-label"
@@ -232,25 +236,70 @@ export default function Signup() {
           <MenuItem value={"employer"}>Employer</MenuItem>
           <MenuItem value={"employee"}>Employee</MenuItem>
         </Select>
-      </FormControl> */}
-      <br />
-      <TextField
-        required
-        id="outlined-required"
-        label="Last School"
-        value={inputs.lastSchool || ""}
-        onChange={handleChange}
-        name="lastSchool"
-      />
-      <TextField
-        required
-        id="outlined-required"
-        label="Last Qualification"
-        value={inputs.lastQualification || ""}
-        onChange={handleChange}
-        name="lastQualification"
-      />
-      {/* <<<<<<< HEAD
+      </FormControl>*/}
+
+        <FormControl required sx={{ m: 1, minWidth: 120 }}>
+          <TextField
+            required
+            label="Qualification"
+            value={inputs.lastQualification || ""}
+            onChange={handleChange}
+            name="lastQualification"
+          />
+        </FormControl>
+
+        <FormControl required sx={{ m: 1, minWidth: 120 }}>
+          <TextField
+            required
+            id="outlined-required"
+            label="Previous Experience"
+            value={inputs.PreviousExperience || ""}
+            onChange={handleChange}
+            name="PreviousExperience"
+          />
+        </FormControl>
+        <FormControl required sx={{ m: 1, minWidth: 120 }}>
+          <InputLabel id="Field">Field</InputLabel>
+          <Select
+            required
+            labelId="Field"
+            id="Field"
+            label="Field"
+            onChange={handleChange}
+            name="Field"
+          >
+            <MenuItem value={"Software Engineer"}>Software Engineer</MenuItem>
+            <MenuItem value={"Software Engineer"}>Software Engineer</MenuItem>
+            <MenuItem value={"Software Engineer"}>Software Engineer</MenuItem>
+            <MenuItem value={"Software Engineer"}>Software Engineer</MenuItem>
+            <MenuItem value={"Software Engineer"}>Software Engineer</MenuItem>
+            <MenuItem value={"Software Engineer"}>Software Engineer</MenuItem>
+            <MenuItem value={"Data Science"}>Data Science</MenuItem>
+            <MenuItem value={"Artifitial Intelligence"}>
+              Artifitial Intelligence
+            </MenuItem>
+          </Select>
+        </FormControl>
+        <br />
+        <FormControl required sx={{ m: 1, minWidth: 120 }}>
+          <InputLabel id="skillLevel">Rate your self</InputLabel>
+          <Select
+            required
+            labelId="skillLevel"
+            id="skillLevel"
+            label="Rate your self *"
+            onChange={handleChange}
+            name="skillLevel"
+          >
+            <MenuItem value={"Fresh"}>Fresh</MenuItem>
+            <MenuItem value={"Junior"}>Junior</MenuItem>
+            <MenuItem value={"Senior"}>Senior</MenuItem>
+            <MenuItem value={"Expert"}>Expert</MenuItem>
+          </Select>
+        </FormControl>
+        <br />
+
+        {/* <<<<<<< HEAD
       <form
         method="POST"
         action="#"
@@ -283,12 +332,13 @@ export default function Signup() {
       </form>
 ======= */}
 
-      <div>
-        <label>Upload profile picture</label>
-        <input id="file1" type="file" name="image" required />
-      </div>
-      <div>
-        <input type="submit" value="Upload" />
+        <div>
+          <label>Upload profile picture</label>
+          <input id="file1" type="file" name="image" required />
+        </div>
+        <div>
+          <input type="submit" value="Upload" />
+        </div>
       </div>
       {/* >>>>>>> 6b405961559f32f413eaca362ec50bd3be401b5e */}
 

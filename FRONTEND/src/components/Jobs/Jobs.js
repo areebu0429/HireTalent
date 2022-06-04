@@ -7,58 +7,31 @@ import { ProfileContext } from "../../App";
 import InputSlider from "../InputSlider/InputSlider";
 import { Button } from "@mui/material";
 import SearchJobs from "../SearchJobs/SearchJobs";
-// const sample_jobs = [
-//   {
-//     job_id: 1,
-//     job_title: "senior software engineer",
-//     job_desc: "Want talented engineer",
-//     job_skills: "html,css",
-//     job_no_of_positions: 2,
-//     job_date: new Date(), //post date,
-//     job_salary: 1000,
-//     job_years_of_experience: 2,
-//     job_career_level: "Experienced Professional",
-//     job_company: "AICompany",
-//     job_location: "lahore",
-//   },
-//   {
-//     job_id: 2,
-//     job_title: "junior software engineer",
-//     job_desc: "Want talented engineer",
-//     job_skills: "html,css",
-//     job_no_of_positions: 2,
-//     job_date: new Date(), //post date,
-//     job_salary: 1000,
-//     job_years_of_experience: 2,
-//     job_career_level: "Entry Level",
-//     job_company: "AICompany",
-//     job_location: "karachi",
-//   },
-// ];
+
 function Jobs({ loggedIn, user, location }) {
   // if (!loggedIn) {
   //   return <div>Please log in..</div>;
   // }
-  const [profile, setprofile] = useContext(ProfileContext);
+  // const [profile, setprofile] = useContext(ProfileContext);
 
   // const [jobs, setjobs] = useState(sample_jobs);
   const [jobs, setjobs] = useState([]);
-  console.log({ jobs });
+  // console.log({ jobs });
 
-  useEffect(() => {
-    Axios.get("http://localhost:3001/viewJobs")
-      .then((response) => {
-        if (response.status === 200) {
-          console.log(response);
-          setjobs(response.data);
-          console.log(jobs);
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-        console.log("Wrong username /Password");
-      });
-  }, []);
+  // useEffect(() => {
+  //   Axios.get("http://localhost:3001/viewJobs")
+  //     .then((response) => {
+  //       if (response.status === 200) {
+  //         console.log(response);
+  //         setjobs(response.data);
+  //         console.log(jobs);
+  //       }
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //       console.log("Wrong username /Password");
+  //     });
+  // }, []);
 
   // useEffect(() => {
   //   Axios.get("http://localhost:3001/viewJobs")
@@ -91,9 +64,38 @@ function Jobs({ loggedIn, user, location }) {
   //       console.log("Wrong username /Password");
   //     });
   // }, [location]);
-  console.log(profile);
+  // console.log(profile);
   // >>>>>>> 6b405961559f32f413eaca362ec50bd3be401b5e
   // console.log({ title });
+  const sample_jobs = [
+    {
+      job_id: 1,
+      job_title: "senior software engineer",
+      job_desc: "Want talented engineer",
+      job_skills: "html,css",
+      job_no_of_positions: 2,
+      job_date: "22/07/22", //post date,
+      job_salary: 1000,
+      job_years_of_experience: 2,
+      job_career_level: "Experienced Professional",
+      job_company: "AICompany",
+      job_location: "lahore",
+    },
+    {
+      job_id: 2,
+      job_title: "junior software engineer",
+      job_desc: "Want talented engineer",
+      job_skills: "html,css",
+      job_no_of_positions: 2,
+      job_date: "22/07/22", //post date,
+      job_salary: 1000,
+      job_years_of_experience: 2,
+      job_career_level: "Entry Level",
+      job_company: "AICompany",
+      job_location: "karachi",
+    },
+  ];
+
   return (
     <div>
       <SearchJobs
@@ -102,7 +104,7 @@ function Jobs({ loggedIn, user, location }) {
       />
 
       <div className="jobs-main">
-        {jobs?.map((job, i) => {
+        {sample_jobs?.map((job, i) => {
           // console.log(job.jobId);
           return (
             <Fragment key={i}>
@@ -114,4 +116,5 @@ function Jobs({ loggedIn, user, location }) {
     </div>
   );
 }
-export default withRouter(Jobs);
+// export default withRouter(Jobs);
+export default Jobs;

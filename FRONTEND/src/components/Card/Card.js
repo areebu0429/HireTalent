@@ -15,17 +15,16 @@ import { useHistory } from "react-router-dom";
 export default function CardWrapper({ job, user, showStats, setjobs, jobs }) {
   const {
     job_id,
-    comp_id,
+    job_company,
     job_title,
     job_desc,
     job_skills,
     job_career_level,
     job_date,
     job_no_of_positions,
-    job_sal,
+    job_salary,
     job_years_of_experience,
-    comp_name,
-    comp_loc,
+    job_location,
   } = job;
   const history = useHistory();
   // console.log({ job_id });
@@ -85,7 +84,7 @@ export default function CardWrapper({ job, user, showStats, setjobs, jobs }) {
         "& .MuiCardHeader-title": { fontWeight: 900 },
       }}
     >
-      <CardHeader title={job_title} subheader={`${comp_name}`} />
+      <CardHeader title={job_title} subheader={`${job_company}`} />
 
       <CardContent>
         <Typography variant="body2" color="text.secondary">
@@ -99,16 +98,19 @@ export default function CardWrapper({ job, user, showStats, setjobs, jobs }) {
             display: "flex",
             justifyContent: "space-between",
             width: "80%",
+            alignItems: "center",
+            marginLeft: "90px"
           }}
         >
           <div>EXP: {job_years_of_experience} Years</div>
           <div>Required Skills: {job_skills}</div>
-          <div>Location: {comp_loc}</div>
+          <div>Location: {job_location}</div>
+          <div>Positions Available: {job_no_of_positions}</div>
 
           {/* <div>{job_date.toDateString()}</div> */}
           <div>
             <Typography variant="body2" color="text.secondary">
-              Salary: ${job_sal}
+              Salary: {job_salary}
             </Typography>
           </div>
           <div>Date: {job_date}</div>
